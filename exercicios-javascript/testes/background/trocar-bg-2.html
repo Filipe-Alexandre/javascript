@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão de background - 02</title>
+    <link rel="shortcut icon" href="../ff.ico" type="image/x-icon">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body {
+            background-color: black;
+        }
+        h1 {
+            background-color: rgba(0, 0, 0, 0.185);
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+        }
+        p {
+            background-color: rgba(255, 255, 255, 0.068);
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            height: 35px;
+            font-size: 28px;
+            text-align: right;
+            margin: 0px 0px;
+        }
+        .botoes {
+            text-align: center;
+            margin-top: 50px;
+            margin-left: 165px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mudando cor de fundo
+        <br>
+        [hexadecimal]
+    </h1>
+    <p>
+        <label for="cor">Cor: </label>
+        <input type="text" name="cor" id="cor" placeholder="#RRGGBB" maxlength="7" onsubmit="proc()">
+        <!--colocando onkeypress=proc(event) o bg muda sem precisar clicar em procurar-->
+    </p>
+    <div class="botoes">
+        <input type="button" value="Procurar" id="proc" onclick="proc()">
+        <input type="button" value="Limpar" id="limp" onclick="limp()">
+    </div>
+</body>
+<script>
+    var hexa = document.querySelector('#cor')
+    var procurar = document.querySelector('#proc')
+    var limpar = document.querySelector('#limp')
+
+    hexa.focus
+
+    function limp(){
+        hexa.value = ''
+        hexa.focus()
+    }
+
+    function proc() {
+        document.body.style.backgroundColor = hexa.value
+        hexa.focus()
+    }
+</script>
+</html>

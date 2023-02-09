@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão de background - 03</title>
+    <link rel="shortcut icon" href="../ff.ico" type="image/x-icon">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            border-width: 0px;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body {
+            background-color: black;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+
+            margin: 50px 0px;
+        }
+        abbr {
+            display: block;
+            margin: auto;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+
+            color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(0, 0, 0, 0.5);
+
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            line-height: 1.5em;
+        }
+        abbr:hover {
+            cursor: pointer;
+        }
+        input {
+            height: 60px;
+            width: 60px;
+            background-color: transparent;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Mudando cor de fundo
+        <br>
+        [botão Color]
+    </h1>
+    <abbr title="Para mudar o fundo selecionar a cor e apertar [ENTER 2X]">?</abbr>
+    <input type="color" name="cor" id="cor" value="#0000ff" onkeypress="teste()">
+</body>
+<script>
+    var cor = document.querySelector("#cor")
+    var mens = document.querySelector('p')
+    function teste() {
+        document.body.style.backgroundColor = cor.value
+    }
+</script>
+</html>

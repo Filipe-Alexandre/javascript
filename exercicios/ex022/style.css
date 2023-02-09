@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+body {
+    background-color: dodgerblue;
+    font: normal 15pt arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+select {
+    width: 170px;
+}
+
+#num {
+    width: 190px;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
